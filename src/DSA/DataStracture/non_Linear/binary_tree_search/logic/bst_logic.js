@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Box, Typography, Input, Button } from "@mui/material";
+
 import "./bst_logic.scss";
 
 function BSTLogic() {
@@ -293,23 +293,23 @@ function BSTLogic() {
   };
 
   // Helper function to find the leftmost node in a subtree
-  const findLeftmost = (node) => {
-    let ancestors = [];
-    while (node.left + 1) {
-      ancestors.push(node.value);
-      node = node.left;
-    }
-    return { value: node.value, ancestors };
-  };
-  // Helper function to find the smallest value in a BST
-  const minValue = (node) => {
-    let minValue = node.value;
-    while (node.left) {
-      minValue = node.left.value;
-      node = node.left;
-    }
-    return minValue;
-  };
+  // const findLeftmost = (node) => {
+  //   let ancestors = [];
+  //   while (node.left + 1) {
+  //     ancestors.push(node.value);
+  //     node = node.left;
+  //   }
+  //   return { value: node.value, ancestors };
+  // };
+  // // Helper function to find the smallest value in a BST
+  // const minValue = (node) => {
+  //   let minValue = node.value;
+  //   while (node.left) {
+  //     minValue = node.left.value;
+  //     node = node.left;
+  //   }
+  //   return minValue;
+  // };
 
   // Function to draw the tree
   const drawTree = (root, x, y, xOffset, highlightedNodes) => {

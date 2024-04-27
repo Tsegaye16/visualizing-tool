@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./graph.scss";
 const SVG_PADDING = 30;
@@ -87,7 +87,7 @@ function GraphLogic() {
 
   // Function to get neighbors of a node
   const getNeighbors = (nodeValue) => {
-    const nodeIndex = nodes.findIndex((node) => node.value === nodeValue);
+    // const nodeIndex = nodes.findIndex((node) => node.value === nodeValue);
     return edges
       .filter((edge) => edge.from === nodeValue)
       .map((edge) => edge.to)
@@ -113,10 +113,8 @@ function GraphLogic() {
       }, timeDelay);
     }
     return () => clearTimeout(timeout);
-  }, [traversalCompleted]);
+  }, [timeDelay, traversalCompleted]);
   ///////////////////////////////////////////////
-
-  const svgRef = useRef(null);
 
   const handleNodeNumberChange = (event) => {
     setNumNodes(parseInt(event.target.value));
@@ -199,13 +197,13 @@ function GraphLogic() {
     }
   };
 
-  const isValidEdge = (fromLabel, toLabel) => {
-    // Not used in the provided code, but included for clarity
-    return (
-      nodes.some((node) => node.value === fromLabel) &&
-      nodes.some((node) => node.value === toLabel)
-    );
-  };
+  // const isValidEdge = (fromLabel, toLabel) => {
+  //   // Not used in the provided code, but included for clarity
+  //   return (
+  //     nodes.some((node) => node.value === fromLabel) &&
+  //     nodes.some((node) => node.value === toLabel)
+  //   );
+  // };
 
   const getAdjacencyMatrix = () => {
     if (nodes.length === 0) return [];
