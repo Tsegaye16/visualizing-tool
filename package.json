@@ -1,5 +1,6 @@
 {
   "name": "dsa",
+  "homepage": "https://Tsegaye16.github.io/deploying-netlify",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,6 +14,7 @@
     "@testing-library/user-event": "^13.5.0",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^11.1.7",
+    "gh-pages": "^6.1.1",
     "react": "^18.3.1",
     "react-ace": "^11.0.1",
     "react-circular-progressbar": "^2.1.0",
@@ -23,6 +25,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
