@@ -158,6 +158,18 @@ function HashLogic() {
     }
   };
 
+  function calculateHeight() {
+    if (!index || !index.length) {
+      return 0; // Handle empty data case
+    }
+
+    const numRows = index.length;
+    const rowHeight = 70; // Adjust based on your element heights
+    const padding = 10; // Adjust padding as needed
+
+    return numRows * rowHeight + padding;
+  }
+
   return (
     <div className="hash-container">
       <div className="user-interaction">
@@ -260,7 +272,7 @@ function HashLogic() {
         <p>{searchResult}</p>
       </div>
       <div className="logical-representation">
-        <svg width="100%" height={1000}>
+        <svg width="100%" height={calculateHeight()}>
           {index.map((column, i) => (
             <React.Fragment key={i}>
               {/* Highlight hash index */}

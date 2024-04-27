@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import "./Home.scss";
 
@@ -7,19 +7,19 @@ import LeftBar from "../../components/leftBar/leftBar";
 
 import Welcome from "../../DSA/welcome/welcome";
 
-import Linked_list from "../../DSA/DataStracture/Linear/linked_list/linked_list";
+import LinkedList from "../../DSA/DataStracture/Linear/linked_list/linked_list";
 
 import BST from "../../DSA/DataStracture/non_Linear/binary_tree_search/BST";
-import Hash_table from "../../DSA/DataStracture/non_Linear/hash_table/hash_table";
+import HashTable from "../../DSA/DataStracture/non_Linear/hash_table/hash_table";
 //import Graph from "../../DSA/DataStracture/non_Linear/graph/graph";
 import Graph from "../../DSA/DataStracture/non_Linear/graph/graph.js";
-import Linear_search from "../../DSA/Algorithm/search/linear_search/linear_search";
-import Binary_search from "../../DSA/Algorithm/search/binary_search/binary_search";
-import Bubble_sort from "../../DSA/Algorithm/sort/bubble_sort/bubble_sort";
-import Insertion_sort from "../../DSA/Algorithm/sort/insertion_sort/insertion_sort";
-import Selection_sort from "../../DSA/Algorithm/sort/selection_sort/selection_sort";
-import Merge_sort from "../../DSA/Algorithm/sort/merge_sort/merge_sort";
-import Quick_sort from "../../DSA/Algorithm/sort/quick_sort/quick_sort";
+import LinearSearch from "../../DSA/Algorithm/search/linear_search/linear_search";
+import BinarySearch from "../../DSA/Algorithm/search/binary_search/binary_search";
+import BubbleSort from "../../DSA/Algorithm/sort/bubble_sort/bubble_sort";
+import InsertionSort from "../../DSA/Algorithm/sort/insertion_sort/insertion_sort";
+import SelectionSort from "../../DSA/Algorithm/sort/selection_sort/selection_sort";
+import MergeSort from "../../DSA/Algorithm/sort/merge_sort/merge_sort";
+import QuickSort from "../../DSA/Algorithm/sort/quick_sort/quick_sort";
 
 import QuizIcon from "@mui/icons-material/Quiz";
 import { useNavigate } from "react-router-dom";
@@ -34,7 +34,7 @@ function Home({ instructor }) {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const navigate = useNavigate();
   const [sidebarWidth, setSidebarWidth] = useState(240);
-  const [progress, setProgress] = useState(0);
+  const progress = 130;
 
   // Initialize as false by default
 
@@ -55,28 +55,28 @@ function Home({ instructor }) {
       case "queue":
         return <QueueList />;
       case "linked-list":
-        return <Linked_list />;
+        return <LinkedList />;
 
       case "bst":
         return <BST />;
       case "hash_table":
-        return <Hash_table />;
+        return <HashTable />;
       case "graph":
         return <Graph />;
       case "linear_search":
-        return <Linear_search />;
+        return <LinearSearch />;
       case "binary_search":
-        return <Binary_search />;
+        return <BinarySearch />;
       case "bubble_sort":
-        return <Bubble_sort />;
+        return <BubbleSort />;
       case "insertion_sort":
-        return <Insertion_sort />;
+        return <InsertionSort />;
       case "selection_sort":
-        return <Selection_sort />;
+        return <SelectionSort />;
       case "merge_sort":
-        return <Merge_sort />;
+        return <MergeSort />;
       case "quick_sort":
-        return <Quick_sort />;
+        return <QuickSort />;
 
       default:
         return <Welcome />;

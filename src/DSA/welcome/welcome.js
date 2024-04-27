@@ -24,7 +24,7 @@ const useStyles = {
     backgroundColor: "#f0f0f0",
     width: "100%",
     //minHeight: "100vh", // Minimum height of the viewport
-    display: "flex",
+    // display: "flex",
     justifyContent: "center",
     alignItems: "center",
     padding: 16,

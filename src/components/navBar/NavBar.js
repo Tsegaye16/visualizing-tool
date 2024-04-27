@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   AppBar,
@@ -10,17 +10,16 @@ import {
   Avatar,
 } from "@mui/material";
 import { Menu as MenuIcon, Close as CloseIcon } from "@mui/icons-material";
-import defaults from "../../assets/default.png";
 
 const NavBar = ({ icon, toggleSidebar }) => {
   const navigate = useNavigate();
 
   const [anchorEl, setAnchorEl] = useState(null);
 
-  const handleHome = () => {
-    navigate("/");
-    handleCloseMenu();
-  };
+  // const handleHome = () => {
+  //   navigate("/");
+  //   handleCloseMenu();
+  // };
 
   const handleMenuClick = (event) => {
     setAnchorEl(event.currentTarget);

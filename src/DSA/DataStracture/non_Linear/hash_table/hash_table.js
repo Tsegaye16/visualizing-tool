@@ -28,37 +28,40 @@ const useStyles = {
     padding: "16px",
   },
 };
-function Hash_table() {
+function HashTable() {
   return (
-    <Container maxWidth="lg">
-      <Box sx={useStyles.section}>
-        <Box sx={useStyles.root}>
-          <Typography variant="h6" sx={useStyles.title}>
-            Introduction
-          </Typography>
-          <Typography variant="body1" sx={useStyles.paragraph}>
-            paragraph about hash introduction....
-          </Typography>
+    <>
+      <HashLogic />
+      <Container maxWidth="lg">
+        <Box sx={useStyles.section}>
+          <Box sx={useStyles.root}>
+            <Typography variant="h6" sx={useStyles.title}>
+              Introduction
+            </Typography>
+            <Typography variant="body1" sx={useStyles.paragraph}>
+              paragraph about hash introduction....
+            </Typography>
+          </Box>
+          <Box sx={useStyles.root}>
+            <Typography variant="h6" sx={useStyles.title}>
+              Operation on hash
+            </Typography>
+            <Typography variant="body1" sx={useStyles.paragraph}>
+              paragraph about hash operations....
+            </Typography>
+          </Box>
+          <Box sx={useStyles.root}>
+            <Typography variant="h6" sx={useStyles.title}>
+              Implementation of hash
+            </Typography>
+            <Typography variant="body1" sx={useStyles.paragraph}>
+              drop a code here....
+            </Typography>
+          </Box>
         </Box>
-        <Box sx={useStyles.root}>
-          <Typography variant="h6" sx={useStyles.title}>
-            Operation on hash
-          </Typography>
-          <Typography variant="body1" sx={useStyles.paragraph}>
-            paragraph about hash operations....
-          </Typography>
-        </Box>
-        <Box sx={useStyles.root}>
-          <Typography variant="h6" sx={useStyles.title}>
-            Implementation of hash
-          </Typography>
-          <Typography variant="body1" sx={useStyles.paragraph}>
-            drop a code here....
-          </Typography>
-        </Box>
-      </Box>
-    </Container>
+      </Container>
+    </>
   );
 }
 
-export default Hash_table;
+export default HashTable;

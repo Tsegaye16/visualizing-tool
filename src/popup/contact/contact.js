@@ -1,16 +1,15 @@
-import React, { useRef, useState } from 'react';
-import emailjs from 'emailjs-com';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 //import './ContactUs.scss';
-import { TextField, Button, Typography, Box } from '@mui/material'
+import { TextField, Button, Typography, Box } from "@mui/material";
 
 export const ContactUs = () => {
-  const form = useRef();
   const [formData, setFormData] = useState({
-    user_name: '',
-    user_email: '',
-    message: '',
+    user_name: "",
+    user_email: "",
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -20,30 +19,33 @@ export const ContactUs = () => {
       [name]: value,
     }));
   };
-  
 
   const sendEmail = (e) => {
     e.preventDefault();
-  
+
     emailjs
-      .sendForm('service_26tthlf', 'template_xp5by8d', e.target, 'CF4qOIwsvGf8WTr_E')
+      .sendForm(
+        "service_26tthlf",
+        "template_xp5by8d",
+        e.target,
+        "CF4qOIwsvGf8WTr_E"
+      )
       .then(
         (result) => {
           console.log(result.text);
-          toast.success('Message sent successfully!');
+          toast.success("Message sent successfully!");
           setFormData({
-            user_name: '',
-            user_email: '',
-            message: '',
+            user_name: "",
+            user_email: "",
+            message: "",
           });
         },
         (error) => {
           console.log(error.text);
-          toast.error('Failed to send message, please try again');
+          toast.error("Failed to send message, please try again");
         }
       );
   };
-  
 
   return (
     <Box
@@ -55,7 +57,7 @@ export const ContactUs = () => {
       }}
     >
       <Box sx={{ maxWidth: 600, mx: "auto", p: 2 }}>
-        <ToastContainer/>
+        <ToastContainer />
         <Typography variant="h4" align="center" mb={2}>
           Contact Us
         </Typography>
@@ -96,37 +98,37 @@ export const ContactUs = () => {
         </form>
       </Box>
     </Box>
-  //   <div className="contact-form-container">
-  //     <ToastContainer />
-     
-  //     <form ref={form} onSubmit={sendEmail}>
-        
-  //       <input
-  //       className='user_name'
-  //         type="text"
-  //         name="user_name"
-  //         value={formData.user_name}
-  //         onChange={handleChange}
-  //         placeholder='User name'
-  //       />
-        
-  //       <input
-  //       className='user_name'
-  //         type="email"
-  //         name="user_email"
-  //         value={formData.user_email}
-  //         onChange={handleChange}
-  //         placeholder='Your E-mail'
-  //       />
-        
-  //       <textarea
-  //         name="message"
-  //         value={formData.message}
-  //         onChange={handleChange}
-  //         placeholder='Type........'
-  //       />
-  //       <input type="submit" value="Send" />
-  //     </form>
-  //   </div>
+    //   <div className="contact-form-container">
+    //     <ToastContainer />
+
+    //     <form ref={form} onSubmit={sendEmail}>
+
+    //       <input
+    //       className='user_name'
+    //         type="text"
+    //         name="user_name"
+    //         value={formData.user_name}
+    //         onChange={handleChange}
+    //         placeholder='User name'
+    //       />
+
+    //       <input
+    //       className='user_name'
+    //         type="email"
+    //         name="user_email"
+    //         value={formData.user_email}
+    //         onChange={handleChange}
+    //         placeholder='Your E-mail'
+    //       />
+
+    //       <textarea
+    //         name="message"
+    //         value={formData.message}
+    //         onChange={handleChange}
+    //         placeholder='Type........'
+    //       />
+    //       <input type="submit" value="Send" />
+    //     </form>
+    //   </div>
   );
 };

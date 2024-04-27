@@ -36,7 +36,7 @@ const useStyles = {
     padding: "16px",
   },
 };
-function Linked_list() {
+function LinkedList() {
   return (
     <Container maxWidth="lg">
       <Box sx={useStyles.section}>
@@ -443,4 +443,4 @@ free(temp);
   );
 }
 
-export default Linked_list;
+export default LinkedList;
