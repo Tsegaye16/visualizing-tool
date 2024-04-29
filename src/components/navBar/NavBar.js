@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import {
   AppBar,
   Toolbar,
@@ -8,13 +8,19 @@ import {
   Menu,
   MenuItem,
   Avatar,
+  Dialog,
+  DialogContent,
 } from "@mui/material";
 import { Menu as MenuIcon, Close as CloseIcon } from "@mui/icons-material";
+import FeatureSection from "../../pages/landingPage/sample/dialog/feature";
+import Team from "../../pages/landingPage/sample/dialog/team";
+import { ContactUs } from "../../popup/contact/contact";
+import AboutSection from "../../pages/landingPage/sample/dialog/AboutSection";
 
 const NavBar = ({ icon, toggleSidebar }) => {
-  const navigate = useNavigate();
-
   const [anchorEl, setAnchorEl] = useState(null);
+  const [openDialog, setOpenDialog] = useState(false);
+  const [selectedFeature, setSelectedFeature] = useState(null);
 
   // const handleHome = () => {
   //   navigate("/");
@@ -29,40 +35,45 @@ const NavBar = ({ icon, toggleSidebar }) => {
     setAnchorEl(null);
   };
 
-  const handleMenuItemClick = (path) => {
-    navigate(path);
+  const handleOpenDialog = (feature) => {
+    setSelectedFeature(feature);
+    setOpenDialog(true);
+  };
 
-    handleCloseMenu();
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
   };
 
   const renderUserMenu = () => {
     return (
-      <Menu
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={handleCloseMenu}
-      >
-        <MenuItem sx={{ display: "flex", alignItems: "center" }}>
-          <Avatar
-            alt="User Avatar"
-            src={"image"}
-            sx={{ width: 32, height: 32, marginRight: 1 }}
-          />
-          <Typography variant="body1" sx={{ fontWeight: 600 }}>
-            {"userName"}
-          </Typography>
-        </MenuItem>
-        <MenuItem>Home</MenuItem>
-
-        <MenuItem onClick={() => handleMenuItemClick("/feature")}>
-          Feature
-        </MenuItem>
-        <MenuItem onClick={() => handleMenuItemClick("/about")}>About</MenuItem>
-        <MenuItem onClick={() => handleMenuItemClick("/team")}>Team</MenuItem>
-        <MenuItem onClick={() => handleMenuItemClick("/contact")}>
-          Contact
-        </MenuItem>
-      </Menu>
+      <div>
+        <Menu
+          anchorEl={anchorEl}
+          open={Boolean(anchorEl)}
+          onClose={handleCloseMenu}
+        >
+          <MenuItem onClick={() => handleOpenDialog("FeatureSection")} onClose>
+            Feature
+          </MenuItem>
+          <MenuItem onClick={() => handleOpenDialog("AboutSection")}>
+            About
+          </MenuItem>
+          <MenuItem onClick={() => handleOpenDialog("Team")}>Team</MenuItem>
+          <MenuItem onClick={() => handleOpenDialog("ContactUs")}>
+            Contact
+          </MenuItem>
+        </Menu>
+        <Dialog open={openDialog} onClose={handleCloseDialog}>
+          {/* <DialogTitle>{selectedFeature}</DialogTitle> */}
+          <DialogContent>
+            {selectedFeature === "FeatureSection" && <FeatureSection />}
+            {selectedFeature === "Team" && <Team />}
+            {selectedFeature === "ContactUs" && <ContactUs />}
+            {selectedFeature === "AboutSection" && <AboutSection />}
+            {/* Render other components based on selectedFeature */}
+          </DialogContent>
+        </Dialog>
+      </div>
     );
   };
 
@@ -96,9 +107,10 @@ const NavBar = ({ icon, toggleSidebar }) => {
             style={{ display: "flex", alignItems: "center", cursor: "pointer" }}
           >
             <Avatar alt="User Avatar" src={"mage"} />
-            <Typography variant="body1" style={{ marginLeft: "8px" }}>
-              {"userName"}
-            </Typography>
+            <Typography
+              variant="body1"
+              style={{ marginLeft: "8px" }}
+            ></Typography>
           </div>
           {renderUserMenu()}
         </div>

@@ -32,34 +32,37 @@ const useStyles = {
 function BST() {
   // Initial tree structure
   return (
-    <Container maxWidth="lg">
-      <Box sx={useStyles.section}>
-        <Box sx={useStyles.root}>
-          <Typography variant="h6" sx={useStyles.title}>
-            Introduction
-          </Typography>
-          <Typography variant="body1" sx={useStyles.paragraph}>
-            paragraph about Binary Search Tree introduction....
-          </Typography>
+    <>
+      <BSTLogic />
+      <Container maxWidth="lg">
+        <Box sx={useStyles.section}>
+          <Box sx={useStyles.root}>
+            <Typography variant="h6" sx={useStyles.title}>
+              Introduction
+            </Typography>
+            <Typography variant="body1" sx={useStyles.paragraph}>
+              Comming soon.......
+            </Typography>
+          </Box>
+          <Box sx={useStyles.root}>
+            <Typography variant="h6" sx={useStyles.title}>
+              Operation on Binary Search Tree
+            </Typography>
+            <Typography variant="body1" sx={useStyles.paragraph}>
+              Comming soon.......
+            </Typography>
+          </Box>
+          <Box sx={useStyles.root}>
+            <Typography variant="h6" sx={useStyles.title}>
+              Implementation of Binary Search Tree
+            </Typography>
+            <Typography variant="body1" sx={useStyles.paragraph}>
+              Comming soon.......
+            </Typography>
+          </Box>
         </Box>
-        <Box sx={useStyles.root}>
-          <Typography variant="h6" sx={useStyles.title}>
-            Operation on Binary Search Tree
-          </Typography>
-          <Typography variant="body1" sx={useStyles.paragraph}>
-            paragraph about Binary Search Tree operations....
-          </Typography>
-        </Box>
-        <Box sx={useStyles.root}>
-          <Typography variant="h6" sx={useStyles.title}>
-            Implementation of Binary Search Tree
-          </Typography>
-          <Typography variant="body1" sx={useStyles.paragraph}>
-            drop a code here....
-          </Typography>
-        </Box>
-      </Box>
-    </Container>
+      </Container>
+    </>
   );
 }
 

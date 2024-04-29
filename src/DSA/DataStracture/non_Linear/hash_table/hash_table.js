@@ -39,7 +39,7 @@ function HashTable() {
               Introduction
             </Typography>
             <Typography variant="body1" sx={useStyles.paragraph}>
-              paragraph about hash introduction....
+              Comming soon.......
             </Typography>
           </Box>
           <Box sx={useStyles.root}>
@@ -47,7 +47,7 @@ function HashTable() {
               Operation on hash
             </Typography>
             <Typography variant="body1" sx={useStyles.paragraph}>
-              paragraph about hash operations....
+              Comming soon.......
             </Typography>
           </Box>
           <Box sx={useStyles.root}>
@@ -55,7 +55,7 @@ function HashTable() {
               Implementation of hash
             </Typography>
             <Typography variant="body1" sx={useStyles.paragraph}>
-              drop a code here....
+              Comming soon.......
             </Typography>
           </Box>
         </Box>

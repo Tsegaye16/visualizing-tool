@@ -20,13 +20,6 @@ function LeftBar({ setSelectedItem, sidebarWidth }) {
           <TreeItem itemId="grid" label="Data structure">
             <TreeItem itemId="a" label="Linear">
               <TreeItem
-                itemId="c"
-                label="Array"
-                onClick={() => {
-                  handleItemClick("array");
-                }}
-              />
-              <TreeItem
                 itemId="d"
                 label="Stack"
                 onClick={() => {

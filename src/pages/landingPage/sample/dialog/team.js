@@ -8,7 +8,16 @@ import genet from "../../../../assets/genet.jpg";
 import kefle from "../../../../assets/kefle.jpg";
 import { GitHub, LinkedIn, Email, Phone } from "@mui/icons-material";
 
-const TeamMember = ({ name, role, github, linkedin, email, phone, image }) => {
+const TeamMember = ({
+  name,
+  role,
+  github,
+  linkedin,
+  email,
+  phone,
+  image,
+  about,
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -41,8 +50,6 @@ const TeamMember = ({ name, role, github, linkedin, email, phone, image }) => {
         </Typography>
         <Typography variant="body1" gutterBottom>
           {/* Brief description about the team member */}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut arcu
-          ac velit pharetra consectetur.
         </Typography>
         <Grid container spacing={2} justify="center">
           <Grid item>
