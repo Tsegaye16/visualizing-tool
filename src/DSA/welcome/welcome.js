@@ -161,10 +161,10 @@ function Welcome() {
                 <li>
                   <b>Data engineer:</b> These engineers develop and optimize
                   complex databases and systems, design algorithms, and oversee
-                  data retrieval and storage.Footnote2 By mastering data
+                  data retrieval and storage. By mastering data
                   structures concepts, they can maximize efficiency and
                   recognize crucial patterns. These are both must-have skills
-                  for those who work with large amounts of data.Footnote3
+                  for those who work with large amounts of data.
                 </li>
                 <li>
                   <b>Software engineer:</b> Software engineers drive and oversee
@@ -176,7 +176,7 @@ function Welcome() {
                   <b>Developer: </b>hese programming experts are often tasked
                   with testing, designing, and overseeing software development.
                   In order to do so, they need to understand Python, Java, C++,
-                  and other popular programming languages.Footnote5 By
+                  and other popular programming languages. By
                   familiarizing themselves with data structures, developers can
                   devise more dynamic and efficient solutions.
                 </li>
