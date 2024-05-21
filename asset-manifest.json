@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/visualizing-tool/static/css/main.ba8182c3.css",
-    "main.js": "/visualizing-tool/static/js/main.8a6e8942.js",
+    "main.js": "/visualizing-tool/static/js/main.1ca8dd39.js",
     "static/js/453.7d4a9bd1.chunk.js": "/visualizing-tool/static/js/453.7d4a9bd1.chunk.js",
     "worker-xquery.js": "/visualizing-tool/7a1a62fec334f0f103a8f7126d402e0e.js",
     "static/media/DSA-welcome.png": "/visualizing-tool/static/media/DSA-welcome.c03c3c1b65686d474f81.png",
@@ -483,11 +483,11 @@
     "d.js": "/visualizing-tool/c98e74fc97b04fe8bf43dcdff549afcf.js",
     "mode-text.js": "/visualizing-tool/0ffb18fb70c87335edee31a479f58a43.js",
     "main.ba8182c3.css.map": "/visualizing-tool/static/css/main.ba8182c3.css.map",
-    "main.8a6e8942.js.map": "/visualizing-tool/static/js/main.8a6e8942.js.map",
+    "main.1ca8dd39.js.map": "/visualizing-tool/static/js/main.1ca8dd39.js.map",
     "453.7d4a9bd1.chunk.js.map": "/visualizing-tool/static/js/453.7d4a9bd1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ba8182c3.css",
-    "static/js/main.8a6e8942.js"
+    "static/js/main.1ca8dd39.js"
   ]
 }
