@@ -1,7 +1,7 @@
 import React from "react";
 import image from "../../assets/DSA-welcome.png";
 import { Container, Box, Typography, Divider } from "@mui/material";
-// Import makeStyles from the separate styles package
+
 import CustomizedAccordions from "./fak";
 
 const useStyles = {
@@ -10,7 +10,7 @@ const useStyles = {
     backgroundSize: "cover",
     backgroundPosition: "center",
     width: "100%",
-    //minHeight: "100vh", // Minimum height of the viewport
+
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -23,8 +23,7 @@ const useStyles = {
     backgroundPosition: "center",
     backgroundColor: "#f0f0f0",
     width: "100%",
-    //minHeight: "100vh", // Minimum height of the viewport
-    // display: "flex",
+
     justifyContent: "center",
     alignItems: "center",
     padding: 16,
@@ -32,7 +31,6 @@ const useStyles = {
   content1: {
     backgroundColor: "rgba(255, 255, 255, 0)", // Semi-transparent white background for content
     padding: 16,
-    // maxWidth: 600, // Adjust this as needed
     color: "white",
     width: "100%", // Ensure content takes full width
   },
@@ -161,10 +159,10 @@ function Welcome() {
                 <li>
                   <b>Data engineer:</b> These engineers develop and optimize
                   complex databases and systems, design algorithms, and oversee
-                  data retrieval and storage. By mastering data
-                  structures concepts, they can maximize efficiency and
-                  recognize crucial patterns. These are both must-have skills
-                  for those who work with large amounts of data.
+                  data retrieval and storage. By mastering data structures
+                  concepts, they can maximize efficiency and recognize crucial
+                  patterns. These are both must-have skills for those who work
+                  with large amounts of data.
                 </li>
                 <li>
                   <b>Software engineer:</b> Software engineers drive and oversee
@@ -176,9 +174,9 @@ function Welcome() {
                   <b>Developer: </b>hese programming experts are often tasked
                   with testing, designing, and overseeing software development.
                   In order to do so, they need to understand Python, Java, C++,
-                  and other popular programming languages. By
-                  familiarizing themselves with data structures, developers can
-                  devise more dynamic and efficient solutions.
+                  and other popular programming languages. By familiarizing
+                  themselves with data structures, developers can devise more
+                  dynamic and efficient solutions.
                 </li>
               </ul>
             </Typography>
